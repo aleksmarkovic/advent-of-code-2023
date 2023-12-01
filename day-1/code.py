@@ -79,7 +79,7 @@ digit_names = {
 }
 
 reversed_digit_names = {value: key for key, value in digit_names.items()}
-print(reversed_digit_names)
+
 calibrations = []
 index = 0
 for line in data_array:
@@ -95,7 +95,6 @@ for line in data_array:
             newString = newString + char
             for key, value in reversed_digit_names.items():
                 if key in newString:
-                    print(newString, reversed_digit_names[key])
                     calibrations[index].append(reversed_digit_names[key])
                     newString = newString[len(newString) - 1]
 
